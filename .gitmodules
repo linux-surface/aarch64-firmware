@@ -1,0 +1,3 @@
+[submodule "scripts/third-party/qca-swiss-army-knife"]
+	path = scripts/third-party/qca-swiss-army-knife
+	url = https://github.com/qca/qca-swiss-army-knife
