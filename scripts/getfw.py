@@ -137,6 +137,16 @@ def patch_venus_extract(log, args):
 
 
 def patch_ath10k_board(log, args):
+    """
+    Create ath10k board-2.bin from single bdf file. Note that we need to create
+    an entry matching the chip ID instead of the board ID. The board ID is
+    0xff, which seems to be used on multiple chips and could be an indicator
+    that it should not be used for matching (i.e. redirecting to the chip ID).
+    It is currently unclear which bdf file to use for this. Any except the
+    '.b5f' files seems to work. Those exceptions cause instant crashes of the
+    remote processor.
+    """
+
     ath10k_bdencoder = PATH_THIRDPARTY / "qca-swiss-army-knife" / "tools" / "scripts" / "ath10k" / "ath10k-bdencoder"
     path_boards = args.path_out.resolve() / 'ath10k' / 'WCN3990' / 'hw1.0' / 'boards'
     path_board_out = args.path_out.resolve() / 'ath10k' / 'WCN3990' / 'hw1.0' / 'board-2.bin'
@@ -158,6 +168,17 @@ def patch_ath10k_board(log, args):
 
 
 def patch_ath10k_firmware(log, args):
+    """
+    Patch the upstream firmware-5.bin file. The firmware running on the WiFi
+    processor seems to send single events per channel instead of event pairs.
+    without the 'single-chan-info-per-channel' option set in firmware-5.bin,
+    the ath10k driver will complain (somewhat cryptically) that it only
+    received a single event. Setting this option shuts up the warning and
+    generally seems like the right thing to do.
+
+    See also: https://www.spinics.net/lists/linux-wireless/msg178387.html.
+    """
+
     ath10k_fwencoder = PATH_THIRDPARTY / "qca-swiss-army-knife" / "tools" / "scripts" / "ath10k" / "ath10k-fwencoder"
     fw5_bin = args.path_out / 'ath10k' / 'WCN3990' / 'hw1.0' / 'firmware-5.bin'
 
@@ -167,6 +188,13 @@ def patch_ath10k_firmware(log, args):
 
 
 def patch_qca_bt_symlinks(log, args):
+    """
+    For some reason the revision/chip ID seems to be read as 0x01 instead of
+    0x21. Windows drivers do only provide the files for revision 0x21 and there
+    also doesn't seem to be a revision 0x01. Symlinking new 0x01 files to their
+    existing 0x21 counterparts works.
+    """
+
     base_path = args.path_out / 'qca'
 
     files = [
@@ -187,7 +215,7 @@ def patch_qca_bt_symlinks(log, args):
 
 
 sources = [
-    # PD Maps
+    # PD Maps for pd-mapper.service
     DownloadFirmware("pd-maps", f"qcom/{PATH_PLATFORM}", f"{URL_AARCH64_FIRMWARE_REPO}/qcom/{PATH_PLATFORM}", [
         "adspr.jsn",
         "adspua.jsn",
