@@ -14,7 +14,7 @@ In particular, run
 ```sh
 ./scripts/getfw.py -w <path-to-windows-root>
 ```
-where `<path-to-windows-root>` is the path to the extracted Windows recovery image or your Windows installation.
+where `<path-to-windows-root>` is the path to the extracted Windows recovery image or your Windows installation (i.e. C:\\ drive).
 In case your Windows installation is encrypted with BitLocker, you will need to run this script from inside WSL.
 By default, the final firmware tree is provided in `./out`.
 See `./scripts/getfw.py --help` for more information.
