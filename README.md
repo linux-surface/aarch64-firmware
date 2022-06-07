@@ -18,3 +18,10 @@ where `<path-to-windows-root>` is the path to the extracted Windows recovery ima
 In case your Windows installation is encrypted with BitLocker, you will need to run this script from inside WSL.
 By default, the final firmware tree is provided in `./out`.
 See `./scripts/getfw.py --help` for more information.
+
+Note: This repository contains submodules, so make sure you run
+```
+git submodule init
+git submodule update
+```
+after cloning.
