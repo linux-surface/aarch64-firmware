@@ -1,0 +1,10 @@
+mcfg_sw/generic/APAC/DCM/Commercial/mcfg_sw.mbn
+mcfg_sw/generic/APAC/SBM/Commercial/mcfg_sw.mbn
+mcfg_sw/generic/NA/ATT/Non_VoLTE/mcfg_sw.mbn
+mcfg_sw/generic/NA/ATT/FirstNet/mcfg_sw.mbn
+mcfg_sw/generic/NA/Verizon/CDMAless/mcfg_sw.mbn
+mcfg_sw/generic/common/ROW/Commercial/mcfg_sw.mbn
+mcfg_sw/generic/Microsoft/Cambria/SW/CMCC/Commercial/MSFT_OpenMkt/mcfg_sw.mbn
+mcfg_sw/generic/Microsoft/Cambria/SW/CT/Commercial/MSFT_OpenMkt/mcfg_sw.mbn
+mcfg_sw/generic/Microsoft/Cambria/SW/CU/Commercial/MSFT_OpenMkt/mcfg_sw.mbn
+mcfg_sw/generic/Microsoft/Cambria/SW/GIGSKY/Commercial/mcfg_sw.mbn

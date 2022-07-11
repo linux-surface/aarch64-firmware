@@ -6,8 +6,7 @@ Currently, supports the Surface Pro X SQ1 and SQ2.
 
 ## Obtaining Firmware
 
-Due to licensing, firmware provided in this repository is limited to what we cannot obtain from other sources.
-To obtain a full firmware package, you will need access to either a (full) Windows (recovery) image or a Windows installation.
+To obtain a full firmware package yourself, you need access to either a (full) Windows (recovery) image or a Windows installation.
 Recovery images can be obtained from https://support.microsoft.com/en-us/surface-recovery-image.
 The full firmware package can then be obtained via `./scripts/getfw.py`.
 In particular, run
@@ -25,3 +24,11 @@ git submodule init
 git submodule update
 ```
 after cloning.
+
+
+## Licensing
+
+We do not have an explicit re-distribution license for some of the firmware files provided here, in particular the ones specific to the Microsoft Surface Pro X.
+These rights lie by Microsoft and/or Qualcomm.
+However, many of these files are signed in a way that make them usable only on the Surface Pro X.
+The files here are provided exclusively for convenience (especially allowing easy creation of distribution packages) as owners of the Surface Pro X can obtain these themselves via the provided script.

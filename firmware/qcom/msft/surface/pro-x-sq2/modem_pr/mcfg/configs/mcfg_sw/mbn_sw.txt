@@ -1,0 +1,12 @@
+mcfg_sw/generic/apac/dcm/commerci/mcfg_sw.mbn
+mcfg_sw/generic/apac/sbm/commerci/mcfg_sw.mbn
+mcfg_sw/generic/microsof/cambria/sw/cmcc/commerci/msft_ope/mcfg_sw.mbn
+mcfg_sw/generic/microsof/cambria/sw/ct/commerci/msft_ope/mcfg_sw.mbn
+mcfg_sw/generic/microsof/cambria/sw/cu/commerci/msft_ope/mcfg_sw.mbn
+mcfg_sw/generic/microsof/cambria/sw/gigsky/commerci/mcfg_sw.mbn
+mcfg_sw/generic/microsof/cambria/sw/mte/factory/mcfg_sw.mbn
+mcfg_sw/generic/microsof/cambria/sw/rel/sc8180x./common/mcfg_sw.mbn
+mcfg_sw/generic/na/att/firstnet/mcfg_sw.mbn
+mcfg_sw/generic/na/att/non_volt/mcfg_sw.mbn
+mcfg_sw/generic/na/verizon/cdmaless/mcfg_sw.mbn
+mcfg_sw/generic/common/row/commerci/mcfg_sw.mbn
